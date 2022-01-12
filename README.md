@@ -24,3 +24,4 @@ Features:
 - Display List: Displays all students stored in database.
 <img width="557" alt="Screen Shot 2022-01-12 at 3 42 54 AM" src="https://user-images.githubusercontent.com/78659700/149112508-876c9eb4-9249-4d4b-b645-8e9461de02cb.png">
 
+To improve further, implement a UI kit into the client side directory.
