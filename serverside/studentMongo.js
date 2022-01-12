@@ -66,59 +66,5 @@ var studentMongo = {
   },
 };
 
-/*
-var student = {
-  studentList: [],
 
-  updateStudent: function (obj, id) {
-    let index = this.getIndexByID(id);
-    console.log("obj=" + obj);
-    if (index != -1) {
-      this.studentList[index].fName = obj.fName;
-      this.studentList[index].lName = obj.lName;
-      this.studentList[index].phoneNumber = obj.phoneNumber;
-      this.studentList[index].email = obj.email;
-      return 0;
-    } else return -1;
-  },
-
-  SearchList: function (obj) {
-    for (let i = 0; i < this.studentList.length; i++) {
-      if (this.studentList[i].id == obj.id) return i;
-    }
-    return -1;
-  },
-
-  addStudent: function (student) {
-    if (this.SearchList(student) == -1) {
-      this.studentList.push(student);
-      return 0;
-    } else return -1;
-  },
-
-  deleteStudent: function (id) {
-    for (let i = 0; i < this.studentList.length; i++) {
-      if (this.studentList[i].id == id) {
-        this.studentList.splice(i, 1);
-        return 0;
-      }
-    }
-    return -1;
-  },
-
-  getIndexByID: function (id) {
-    for (let i = 0; i < this.studentList.length; i++) {
-      if (this.studentList[i].id == id) return i;
-    }
-    return -1;
-  },
-
-  getStudentByID: function (id) {
-    for (let i = 0; i < this.studentList.length; i++) {
-      if (this.studentList[i].id == id) return this.studentList[i];
-    }
-    return null;
-  },
-};
-*/
 module.exports = studentMongo;
