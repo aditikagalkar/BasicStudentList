@@ -6,7 +6,6 @@ var studentMongo = {
     var db = await mongoClient.connect(url);
     dbo = db.db("mydb");
     let arr = await dbo.collection("Students").find().toArray();
-    console.log("Arr" + arr);
     db.close();
     return arr;
   },
@@ -15,19 +14,15 @@ var studentMongo = {
     var db = await mongoClient.connect(url);
     dbo = db.db("mydb");
     var query = { id: Number(idNum) };
-    console.log(query);
     let obj = await dbo.collection("Students").find(query).toArray();
     db.close();
-    console.log("OBJ by id: " + idNum + " " + obj);
     return obj;
   },
 
   addStudent: async function (student) {
     var db = await mongoClient.connect(url);
     dbo = db.db("mydb");
-    console.log(student);
     await dbo.collection("Students").insertOne(student);
-    console.log("Student " + student.fName + " inserted");
     db.close();
   },
 
@@ -43,9 +38,7 @@ var studentMongo = {
         email: newObj.email,
       },
     };
-    console.log("newValues " + JSON.stringify(newValues));
     await dbo.collection("Students").updateOne(query, newValues);
-    console.log("Student " + idNum + " updated");
     db.close();
   },
 
